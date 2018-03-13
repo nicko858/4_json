@@ -3,8 +3,8 @@ import sys
 
 
 def load_data(filepath):
-    f = open(filepath, 'r')
-    return f.read()
+    source_file = open(filepath, 'r')
+    return source_file.read()
     pass
 
 
@@ -15,6 +15,6 @@ def pretty_print_json(data):
 
 
 if __name__ == '__main__':
-    data = load_data(sys.argv[1])
-    pretty_print_json(data)
+    json_file = load_data(sys.argv[1])
+    pretty_print_json(json_file)
     pass
