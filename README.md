@@ -11,26 +11,12 @@ Module ```pprint_json.py``` contains the following functions:
 - ```load_data()``` - accepts the input to a file with arbitrary data in json format and reads the file content
 - ```pretty_print_json()``` - accepts the file content  from the previous function and makes it easy-to-read using ```json.dumps()```- function 
 
-Here is example of source-code and how to use this functions:
+The program uses these libs from Python Standart Library:
 
 ```python
 import json
 import sys
 
-
-def load_data(filepath):
-    f = open(filepath, 'r')
-    return f.read()
-    pass
-
-
-def pretty_print_json(data):
-    parsed = json.loads(data)
-    print(json.dumps(parsed, indent=4, ensure_ascii=False, sort_keys=True))
-    pass
-
-    data = load_data(sys.argv[1])
-    pretty_print_json(data)
 ```
 
 How in works:
@@ -76,6 +62,13 @@ in the console  output you will see something  like this:
                 }
 
 ```
+
+The program check command-line arguments and if it is wrong,  you will see the warning message ```Incorrect line argument!``` and usage-message.
+
+If the content of source-file is not in JSON-format,  you will see the warning message ```The source-file is not a valid JSON! Check the file content!```.
+
+In the cases above, the program will not run.
+
 
 # Project Goals
 
