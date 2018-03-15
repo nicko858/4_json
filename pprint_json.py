@@ -13,15 +13,20 @@ def load_data(filepath):
 def pretty_print_json(source_data):
     try:
         parsed_data = json.loads(source_data)
-        print(json.dumps(parsed_data, indent=4, ensure_ascii=False, sort_keys=True))
-    except:
-        print('The source-file is not a valid JSON! Check the file content!')
-        exit(1)
+        result = json.dumps(parsed_data, indent=4, ensure_ascii=False, sort_keys=True)
+        return result
+    except ValueError:
+            print("Decoding JSON has failed!")
+            return None
 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Incorrect line argument!""\n"+ "Using: " + usage)
+        print("Incorrect line argument!""\n" "Using: %s" % usage)
     else:
         json_content = load_data(sys.argv[1])
-        pretty_print_json(json_content)
+        content_to_print = pretty_print_json(json_content)
+        if content_to_print:
+            print(content_to_print)
+        else:
+            print('The source-file is not a valid JSON! Check the file content!')
