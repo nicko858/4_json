@@ -13,8 +13,8 @@ def load_data(filepath):
 def pretty_print_json(source_data):
     try:
         parsed_data = json.loads(source_data)
-        result = json.dumps(parsed_data, indent=4, ensure_ascii=False, sort_keys=True)
-        return result
+        result_data = json.dumps(parsed_data, indent=4, ensure_ascii=False, sort_keys=True)
+        return result_data
     except ValueError:
             print("Decoding JSON has failed!")
             return None
