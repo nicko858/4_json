@@ -7,7 +7,7 @@ def load_data(filepath):
         return source_file.read()
 
 
-def pretty_print_json(source_data):
+def get_pretty_json(source_data):
     try:
         parsed_data = json.loads(source_data)
         result_data = json.dumps(parsed_data, indent=4, ensure_ascii=False, sort_keys=True)
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         exit(1)
     json_content = load_data(sys.argv[1])
     try:
-        content_to_print = pretty_print_json(json_content)
+        content_to_print = get_pretty_json(json_content)
         if content_to_print:
             print(content_to_print)
         else:
