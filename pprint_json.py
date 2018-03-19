@@ -30,4 +30,4 @@ if __name__ == '__main__':
             raise ValueError
     except ValueError:
         print("Decoding JSON has failed!")
-        print('The source-file is not a valid JSON! Check the file content!')
+        print("Thesource-file is not a valid JSON! Check the file content!")
