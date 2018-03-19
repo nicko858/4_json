@@ -12,7 +12,7 @@ def get_pretty_json(source_data):
         parsed_data = json.loads(source_data)
         result_data = json.dumps(parsed_data, indent=4, ensure_ascii=False, sort_keys=True)
         return result_data
-    except:
+    except ValueError:
         return None
 
 
