@@ -75,7 +75,7 @@ In the cases above, the program will not run.
 
 # Project Goals
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)# Prettify JSON
+The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
 
 The code reads a file with arbitrary data in JSON format and displays its contents in the console in an easy-to-read form: adds line breaks, left padding and spaces.
 
